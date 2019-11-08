@@ -1,11 +1,18 @@
-<div class="container">
-  <h1>All cocktails</h1>
-
-  <% @cocktails.each do |cocktail| %>
-    <div class="cocktail">
-      <h3><%= cocktail.name %></h3>
-    </div>
-  <% end %>
-
-  <%= link_to 'Add new cocktail', new_cocktail_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1540408055539-b4dd7d0da12e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80);">
+  <div class="container">
+    <h1>Welcome to Desolate Spire</strong>!</h1>
+    <div class="button_cont example_d" align="center"><%= link_to 'Add new cocktail', new_cocktail_path %></div>
+  </div>
 </div>
+
+<div class="container">
+
+  <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+          <h2><%= cocktail.name %></h2>
+        </div>
+      <% end %>
+  </div>
+</div>
+

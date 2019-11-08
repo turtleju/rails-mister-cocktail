@@ -19,6 +19,7 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
